@@ -67,10 +67,12 @@ let f = "This is a string"
 
 result = `a is ${a} b is ${b} c is ${c} d is ${d} e is ${e} f is ${f} `
 
-console.log(result)
+// console.log(result)
 
 // Write a JavaScript program that adds 2 numbers together.
 // store input numbers
+const sumOfTwoNumbers = () => {
+
 const num1 = 5;
 const num2 = 3;
 
@@ -78,38 +80,53 @@ const num2 = 3;
 const sum = num1 + num2
 
 //display sum
-console.log('the sum of ' + num1 + ' and ' + num2 + ' is ' + sum);
+// console.log('the sum of ' + num1 + ' and ' + num2 + ' is ' + sum);
+
+document.getElementById("total-sum").innerHTML = sum;
+}
 
 
 // Write a JavaScript program that runs only when 2 things are true.
+const twoThingsTrue = () => {
+
 const age = 18;
 const ownsCar = true;
 
-if (age >=16 && ownsCar) {
-  console.log("Jenn is old enough to drive and owns a car");
-} 
+ if (age >=16 == true && ownsCar == true) {
+  // console.log("Jenn is old enough to drive and owns a car");
 
+ document.getElementById("two-true").innerHTML = 'Jenn is old enough to drive and owns a car.'
+}
+}
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-const someoneElsePaying = true;
-const onSale = false;
+const oneThingTrue = () => {
 
-if (someoneElsePaying || onSale) { 
-  console.log("Jenn is going shopping.");
-} else {
-  console.log("Jenn is not going shopping");
+const notMePaying = true;
+const onSale = true;
+
+if (notMePaying == false || onSale == true) { 
+  // console.log("Jenn is going shopping.");
+  // console.log("Jenn is not going shopping");
+
+  document.getElementById("one-true").innerHTML = 'Jenn is not going shopping.'
+}
 }
 
 
 // Write a JavaScript program that runs when both things are not true.  
+const noThingTrue = () => {
+
 const dryTopSoil= false;
 const wiltingLeaves= false;
 
-if (dryTopSoil && wiltingLeaves) {
-  console.log("plants need watering");
-} else {
-  console.log("plants don't need watering");
+if (dryTopSoil ==false && wiltingLeaves == false) {
+  // console.log("plants need watering");
+  // console.log("plants don't need watering");
+
+document.getElementById("no-true").innerHTML = 'Plants do not need watering.'
+}
 }
 
 // ***************************
@@ -118,9 +135,6 @@ if (dryTopSoil && wiltingLeaves) {
 
 // 6. go to `index.html` 
 // 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
-
-
-
 
 // Additional Resources
 // Video1: https://player.vimeo.com/video/377147232
