@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+    background-image: url("bgpic.jpg");
+    background-image: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: x-large;
+    color: rgb(110, 177, 142);
+}

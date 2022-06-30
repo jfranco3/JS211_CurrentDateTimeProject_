@@ -114,7 +114,6 @@ if (notMePaying == false || onSale == true) {
 }
 }
 
-
 // Write a JavaScript program that runs when both things are not true.  
 const noThingTrue = () => {
 
