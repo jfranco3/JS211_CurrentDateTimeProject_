@@ -21,8 +21,8 @@ const numToString = ()=> {
 
   let text = convertNum.toString();
 
-  return text 
-
+  // return text 
+  // document.getElementById().innerHTML = 'this number is a string'
 }
 
 
@@ -43,31 +43,43 @@ document.getElementById("string-number").innerHTML = newNum;
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-  // * Boolean
-  // * Null
-  // * Undefined
-  // * Number
-  // * NaN
-  // * String
+
+const dataType = (userInput) => {
+  document.getElementById("box")
+  let userInput = inputBox.value
+  let placeHolder = ""
+  if (typeof(userInput) === "number") {
+    console.log(userInput + "is a number")
+    placeHolder = "number"
+  }
+  if (typeof(userInput) === "boolean") {
+    console.log(userInput + "is a boolean")
+    placeHolder = "boolean"
+  }
+  if (typeof(userInput) === "null") {
+    console.log(userInput + "is null")
+    placeHolder = "null"
+  }
+  if (typeof(userInput) === "undefined") {
+    console.log(userInput + "is undefined")
+    placeHolder = "undefined"
+  }
+  if (typeof(userInput) === "Nan") {
+    console.log(userInput + "is Nan")
+    placeHolder = "Nan"
+  }
+  if (typeof(userInput) === "string") {
+    console.log(userInput + "is a string")
+    placeHolder = "string"
+  }
+  document.getElementById("place").innerHTML = placeHolder
+}
+
+//.value auto string. need to change value of string to something else
+
   
-// get a value from form input and put it in a variable 
 
-// if type of input variable is Boolean 
-//   return "it's a boolean"
-// else if it's a null value (probably type null)
-//   return "it's a null value"
-  
-let a = true
-let b = null
-let c 
-let d = 33
-let e = NaN
-let f = "This is a string"
-// result = " a is " + a + " b is " + b
 
-result = `a is ${a} b is ${b} c is ${c} d is ${d} e is ${e} f is ${f} `
-
-// console.log(result)
 
 // Write a JavaScript program that adds 2 numbers together.
 // store input numbers
@@ -76,7 +88,6 @@ const sumOfTwoNumbers = () => {
 const num1 = 5;
 const num2 = 3;
 
-//add two numbers
 const sum = num1 + num2
 
 //display sum
@@ -98,7 +109,6 @@ const ownsCar = true;
  document.getElementById("two-true").innerHTML = 'Jenn is old enough to drive and owns a car.'
 }
 }
-
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 const oneThingTrue = () => {
@@ -127,6 +137,7 @@ if (dryTopSoil ==false && wiltingLeaves == false) {
 document.getElementById("no-true").innerHTML = 'Plants do not need watering.'
 }
 }
+
 
 // ***************************
 //         PART TWO
