@@ -42,50 +42,54 @@ document.getElementById("string-number").innerHTML = newNum;
 }
 
 
-// Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-
-// const dataType = (userInput) => {
-//   // document.getElementById("box")
-//   let userInput = inputBox  .value
-//   let placeHolder = ""
-//   if (typeof(userInput) === "number") {
-//     console.log(userInput + "is a number")
-//     placeHolder = "number"
-//   }
-//   if (typeof(userInput) === "boolean") {
-//     console.log(userInput + "is a boolean")
-//     placeHolder = "boolean"
-//   }
-//   if (typeof(userInput) === "null") {
-//     console.log(userInput + "is null")
-//     placeHolder = "null"
-//   }
-//   if (typeof(userInput) === "undefined") {
-//     console.log(userInput + "is undefined")
-//     placeHolder = "undefined"
-//   }
-//   if (typeof(userInput) === "Nan") {
-//     console.log(userInput + "is Nan")
-//     placeHolder = "Nan"
-//   }
-//   if (typeof(userInput) === "string") {
-//     console.log(userInput + "is a string")
-//     placeHolder = "string"
-//   }
-//   document.getElementById("place").innerHTML = placeHolder
-// }
-
-//.value auto string. need to change value of string to something else
-
-  
+// Write a JavaScript  program that takes in different datatypes and prints out whether they are a:
 
 const dataType = () => {
-  if (typeof(userInput) === "number") {
-        console.log(userInput + "is a number")
-         placeHolder = "number"
-       }
-}
+  let inputBox = document.getElementById("box")
+  let userInput = inputBox.value
+  let placeHolder = ""
+  console.log(inputBox)
+  console.log(userInput)
 
+
+  ///how to determine if null/undefined from input box??
+
+  if (parseInt(userInput)){
+    userInput = parseInt(userInput)
+  }
+
+  if (userInput == 'true' || userInput === 'false') {
+    if (userInput === 'true') userInput = true
+    if (userInput === 'false') userInput = false
+  }
+
+  if (typeof(userInput) === "number") {
+    console.log(userInput + " is a number")
+    placeHolder = "number"
+  }
+
+  if (typeof(userInput) === "boolean") {
+    console.log(userInput + " is a boolean")
+    placeHolder = "boolean"
+  }
+  if (typeof(userInput) === "null") {
+    console.log(userInput + " is null")
+    placeHolder = "null"
+  }
+  if (typeof(userInput) === "undefined") {
+    console.log(userInput + " is undefined")
+    placeHolder = "undefined"
+  }
+  if (typeof(userInput) === "Nan") {
+    console.log(userInput + " is Nan")
+    placeHolder = "Nan"
+  }
+  if (typeof(userInput) === "string") {
+    console.log(userInput + " is a string")
+    placeHolder = "string"
+  }
+  document.getElementById("place").innerHTML = placeHolder
+}
 
 
 // Write a JavaScript program that adds 2 numbers together.
@@ -102,7 +106,6 @@ const sum = num1 + num2
 
 document.getElementById("total-sum").innerHTML = sum;
 }
-
 
 // Write a JavaScript program that runs only when 2 things are true.
 const twoThingsTrue = () => {
@@ -144,7 +147,6 @@ if (dryTopSoil ==false && wiltingLeaves == false) {
 document.getElementById("no-true").innerHTML = 'Plants do not need watering.'
 }
 }
-
 
 // ***************************
 //         PART TWO
